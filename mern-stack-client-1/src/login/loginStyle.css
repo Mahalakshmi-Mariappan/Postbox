@@ -1,0 +1,32 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-section {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  right: 50px;
+  left: 0px;
+  background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+  background-size: cover;
+  background-position: center;
+} 
+ 

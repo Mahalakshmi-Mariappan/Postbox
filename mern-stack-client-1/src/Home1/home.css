@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+
+#header {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  color: white;
+  top: 0;
+  z-index: 2000;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+.con{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left{
+  flex: 0.4;
+  margin-right: 28rem;
+  letter-spacing: 1px;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  padding: 5px 20px;
+  font-size: 35px;
+  
+}
+
+.header-right {
+  flex: 0.6;
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Center items horizontally */
+  align-items: center;
+  gap: 25px; /* Add gap between elements */
+}
+
+.header-right a {
+  text-decoration: none; /* Ensure links have no underline */
+}
+
+.header-right a h3 {
+  font-size: 25px;
+  color: white; /* Set initial text color to white */
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: 'Crimson Text', serif;
+  font-weight: 300;
+  padding: 5px 20px;
+  position: relative; /* Add this line to make the ::after pseudo-element work correctly */
+  transition: all 200ms ease-in-out; /* Transition all properties smoothly */
+}
+
+.header-right a h3::after {
+  content: ''; /* Add content property */
+  position: absolute; /* Position the pseudo-element absolutely */
+  bottom: -5px;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  background-color: white; /* Set initial line color to white */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Add transition for color */
+  transform: scaleX(0);
+}
+
+.header-right a h3:hover {
+  color: blue; /* Change text color on hover */
+  font-size: 28px; /* Increase text size on hover */
+}
+
+.header-right a h3:hover::after {
+  transform: scaleX(1); /* Apply the transform on hover */
+  background-color: blue; /* Change line color on hover */
+}
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;  /* Setting a visible color */
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 820px) {
+  
+  .header-right {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  
+  }
+  .hide {
+    display: none;
+  }
+  
+  .con{
+    padding: 5px;
+  }
+}
+
+.show-menu .header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background-color:rgb(51, 94, 143);
+  top: 0;
+  left: 0;
+  right: 0;
+  
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 9rem;
+}
+
+.left-con, .right-con {
+  width: 45%;
+}
+
+.left-con p {
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  
+}
+
+.left-con button {
+  margin-top: 20px;
+  background-color: yellow;
+  color: black;
+  border-radius: 5px;
+}
+.right-con img{
+  margin-bottom:9rem;
+  width:600px;
+  height:350px;
+  padding-right:2px;
+
+}
